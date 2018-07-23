@@ -13,7 +13,7 @@ class NAILapi {
     
     private static var nail: NativeAppIntegrationLayer?
     
-    static func authorizeProtocols(protocolList:[String], singleton : Bool = true) {
+    static func authorizeProtocols(protocolList:[String], singleton : Bool = true) -> String {
         //Combine both parameter into one string array, this will be passed into the Extension Layer
         var itemForExtension = protocolList
         itemForExtension.append(singleton.description)
@@ -27,22 +27,30 @@ class NAILapi {
             UIApplication.shared.keyWindow?.rootViewController?.present(activityVC, animated: true, completion: nil)
         }
         
+        var result : String = ""
+        
         activityVC.completionWithItemsHandler = {
             activityType, completed, returnedItems, error in
             print("NAIL log :: back from extension")
             
             if(returnedItems == nil || returnedItems!.count <= 0){
                 print("NAIL log :: No item found from the extension")
-                return
+                
             } else {
                 let item : NSExtensionItem = returnedItems?.first as! NSExtensionItem
-                self.extractDataFromExtension(item: item)
+                let response = self.extractDataFromExtension(item: item)
+                if response != nil || response!.count >= 0 {
+                    result = response!
+                }
             }
         }
+        
+        return result
     }
     
     //Extract the data from the extension
-    private static func extractDataFromExtension(item : NSExtensionItem){
+    private static func extractDataFromExtension(item : NSExtensionItem) -> String? {
+        var response: String?
         DispatchQueue.global(qos: .background).async {
             
             let itemProvider = item.attachments?.first as! NSItemProvider
@@ -51,20 +59,22 @@ class NAILapi {
                 itemProvider.loadItem(forTypeIdentifier: kUTTypeJSON as String, options: nil, completionHandler: { (data, error) -> Void in
                     if error != nil {
                         print("error on extracting data from extension , \(error.localizedDescription)")
-                        return
+                        response = nil
                     }
                     let jsonData = data as! Data
                     NAILapi.nail = NativeAppIntegrationLayer(inputData: jsonData)
                     
                     //returned items is in json format
-                    let response = self.getNail()!.serialize()
-                    print("DATA SOURCE : \(response)")
+                    response = self.getNail()!.serialize()
+                    print("DATA SOURCE : \(String(describing: response))")
+                    
                     
                     //let x = CDVPluginResult(status: CDVCommandStatus_OK, messageAs: response)
                     //self.commandDelegate.send(x, callbackId: self.command?.callbackId)
                 })
             }
         }
+        return response
     }
     
     static func getNail()-> NativeAppIntegrationLayer? {

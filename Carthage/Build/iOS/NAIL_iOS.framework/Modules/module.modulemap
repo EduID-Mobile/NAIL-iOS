@@ -1,0 +1,11 @@
+framework module NAIL_iOS {
+  umbrella header "NAIL_iOS.h"
+
+  export *
+  module * { export * }
+}
+
+module NAIL_iOS.Swift {
+    header "NAIL_iOS-Swift.h"
+    requires objc
+}
