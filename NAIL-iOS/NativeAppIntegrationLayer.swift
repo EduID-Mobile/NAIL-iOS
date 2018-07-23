@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NativeAppIntegrationLayer {
+public class NativeAppIntegrationLayer {
     
     private var serviceNames = [String]()
     private var endpointUrl  = [String]()
@@ -24,7 +24,7 @@ class NativeAppIntegrationLayer {
     
     private var responseData : Any?
     
-    init(inputData: Data){
+    public init(inputData: Data){
         
         //inputData : Data
         do{
@@ -41,11 +41,11 @@ class NativeAppIntegrationLayer {
         }
     }
     
-    init ( serializedStr : String ){
+    public init ( serializedStr : String ){
         parse(serialization: serializedStr)
     }
     
-    func parse(serialization : String ) {
+    public func parse(serialization : String ) {
         guard let data = serialization.data(using: .utf8, allowLossyConversion: false) else {
             return
         }
@@ -86,7 +86,7 @@ class NativeAppIntegrationLayer {
         
     }
     
-    func serialize() -> String {
+    public func serialize() -> String {
         if responseData == nil {
             print("no response data found for serialize!")
             return ""

@@ -13,7 +13,7 @@ public class NAILapi {
     
     private static var nail: NativeAppIntegrationLayer?
     
-    static func authorizeProtocols(protocolList:[String], singleton : Bool = true) -> String {
+    public static func authorizeProtocols(protocolList:[String], singleton : Bool = true) -> String {
         //Combine both parameter into one string array, this will be passed into the Extension Layer
         var itemForExtension = protocolList
         itemForExtension.append(singleton.description)
@@ -77,7 +77,7 @@ public class NAILapi {
         return response
     }
     
-    static func getNail()-> NativeAppIntegrationLayer? {
+    public static func getNail()-> NativeAppIntegrationLayer? {
         if NAILapi.nail == nil{
             return nil
         }
