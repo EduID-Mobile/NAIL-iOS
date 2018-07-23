@@ -40,11 +40,13 @@ public class NAILapi {
             } else {
                 let item : NSExtensionItem = returnedItems?.first as! NSExtensionItem
                 group.enter()
-                let response = self.extractDataFromExtension(item: item)
-                
+        
+                guard let response = self.extractDataFromExtension(item: item) else {
+                    print("NAIL log : empty response from extension")
+                }
                 group.wait()
-                if response != nil || response!.count >= 0 {
-                    result = response!
+                if response.count >= 0 {
+                    result = response
                 }
             }
         }
