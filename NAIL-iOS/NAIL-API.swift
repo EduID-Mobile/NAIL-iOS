@@ -9,7 +9,7 @@
 import Foundation
 import MobileCoreServices
 
-class NAILapi {
+public class NAILapi {
     
     private static var nail: NativeAppIntegrationLayer?
     
