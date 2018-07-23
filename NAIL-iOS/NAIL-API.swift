@@ -43,6 +43,7 @@ public class NAILapi {
         
                 guard let response = self.extractDataFromExtension(item: item) else {
                     print("NAIL log : empty response from extension")
+                    return
                 }
                 group.wait()
                 if response.count >= 0 {
