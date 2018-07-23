@@ -12,6 +12,7 @@ import MobileCoreServices
 public class NAILapi {
     
     private static var nail: NativeAppIntegrationLayer?
+    static let group = DispatchGroup() //controlling the async flow for the authorizeProtocols
     
     public static func authorizeProtocols(protocolList:[String], singleton : Bool = true) -> String {
         //Combine both parameter into one string array, this will be passed into the Extension Layer
@@ -38,7 +39,10 @@ public class NAILapi {
                 
             } else {
                 let item : NSExtensionItem = returnedItems?.first as! NSExtensionItem
+                group.enter()
                 let response = self.extractDataFromExtension(item: item)
+                
+                group.wait()
                 if response != nil || response!.count >= 0 {
                     result = response!
                 }
@@ -74,6 +78,7 @@ public class NAILapi {
                 })
             }
         }
+        group.leave()
         return response
     }
     
