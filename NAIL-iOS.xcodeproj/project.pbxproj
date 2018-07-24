@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15165E5F2105ED9B00F27B9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15165E5E2105ED9B00F27B9D /* AppDelegate.swift */; };
+		15165E612105ED9B00F27B9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15165E602105ED9B00F27B9D /* ViewController.swift */; };
+		15165E642105ED9B00F27B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15165E622105ED9B00F27B9D /* Main.storyboard */; };
+		15165E662105ED9C00F27B9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15165E652105ED9C00F27B9D /* Assets.xcassets */; };
+		15165E692105ED9C00F27B9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15165E672105ED9C00F27B9D /* LaunchScreen.storyboard */; };
+		15165E8C2105F3A900F27B9D /* NAIL_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D2F7B82101C6F400C402A9 /* NAIL_iOS.framework */; };
+		15165E8D2105F3A900F27B9D /* NAIL_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15D2F7B82101C6F400C402A9 /* NAIL_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15165E922105F6AB00F27B9D /* BoxBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15165E912105F6AB00F27B9D /* BoxBinding.swift */; };
 		15D2F7C22101C6F400C402A9 /* NAIL_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D2F7B82101C6F400C402A9 /* NAIL_iOS.framework */; };
 		15D2F7C72101C6F400C402A9 /* NAIL_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D2F7C62101C6F400C402A9 /* NAIL_iOSTests.swift */; };
 		15D2F7C92101C6F400C402A9 /* NAIL_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D2F7BB2101C6F400C402A9 /* NAIL_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17,6 +25,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		15165E8A2105EDAB00F27B9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15D2F7AF2101C6F400C402A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15165E5B2105ED9B00F27B9D;
+			remoteInfo = testapp;
+		};
+		15165E8E2105F3A900F27B9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15D2F7AF2101C6F400C402A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15D2F7B72101C6F400C402A9;
+			remoteInfo = "NAIL-iOS";
+		};
 		15D2F7C32101C6F400C402A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 15D2F7AF2101C6F400C402A9 /* Project object */;
@@ -26,7 +48,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		15165E902105F3AA00F27B9D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				15165E8D2105F3A900F27B9D /* NAIL_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		15165E5C2105ED9B00F27B9D /* testapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15165E5E2105ED9B00F27B9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15165E602105ED9B00F27B9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		15165E632105ED9B00F27B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15165E652105ED9C00F27B9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15165E682105ED9C00F27B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15165E6A2105ED9C00F27B9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15165E912105F6AB00F27B9D /* BoxBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxBinding.swift; sourceTree = "<group>"; };
 		15D2F7B82101C6F400C402A9 /* NAIL_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NAIL_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D2F7BB2101C6F400C402A9 /* NAIL_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAIL_iOS.h; sourceTree = "<group>"; };
 		15D2F7BC2101C6F400C402A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +84,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		15165E592105ED9B00F27B9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15165E8C2105F3A900F27B9D /* NAIL_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15D2F7B42101C6F400C402A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,11 +110,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15165E5D2105ED9B00F27B9D /* testapp */ = {
+			isa = PBXGroup;
+			children = (
+				15165E5E2105ED9B00F27B9D /* AppDelegate.swift */,
+				15165E602105ED9B00F27B9D /* ViewController.swift */,
+				15165E622105ED9B00F27B9D /* Main.storyboard */,
+				15165E652105ED9C00F27B9D /* Assets.xcassets */,
+				15165E672105ED9C00F27B9D /* LaunchScreen.storyboard */,
+				15165E6A2105ED9C00F27B9D /* Info.plist */,
+			);
+			path = testapp;
+			sourceTree = "<group>";
+		};
 		15D2F7AE2101C6F400C402A9 = {
 			isa = PBXGroup;
 			children = (
 				15D2F7BA2101C6F400C402A9 /* NAIL-iOS */,
 				15D2F7C52101C6F400C402A9 /* NAIL-iOSTests */,
+				15165E5D2105ED9B00F27B9D /* testapp */,
 				15D2F7B92101C6F400C402A9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +138,7 @@
 			children = (
 				15D2F7B82101C6F400C402A9 /* NAIL_iOS.framework */,
 				15D2F7C12101C6F400C402A9 /* NAIL-iOSTests.xctest */,
+				15165E5C2105ED9B00F27B9D /* testapp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				15D2F7BB2101C6F400C402A9 /* NAIL_iOS.h */,
+				15165E912105F6AB00F27B9D /* BoxBinding.swift */,
 				15D2F7BC2101C6F400C402A9 /* Info.plist */,
 				15D2F7D22101CF8200C402A9 /* NativeAppIntegrationLayer.swift */,
 				15D2F7D82101D16C00C402A9 /* NAIL-API.swift */,
@@ -112,6 +180,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		15165E5B2105ED9B00F27B9D /* testapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15165E872105ED9C00F27B9D /* Build configuration list for PBXNativeTarget "testapp" */;
+			buildPhases = (
+				15165E582105ED9B00F27B9D /* Sources */,
+				15165E592105ED9B00F27B9D /* Frameworks */,
+				15165E5A2105ED9B00F27B9D /* Resources */,
+				15165E902105F3AA00F27B9D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15165E8F2105F3A900F27B9D /* PBXTargetDependency */,
+			);
+			name = testapp;
+			productName = testapp;
+			productReference = 15165E5C2105ED9B00F27B9D /* testapp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		15D2F7B72101C6F400C402A9 /* NAIL-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15D2F7CC2101C6F400C402A9 /* Build configuration list for PBXNativeTarget "NAIL-iOS" */;
@@ -142,6 +229,7 @@
 			);
 			dependencies = (
 				15D2F7C42101C6F400C402A9 /* PBXTargetDependency */,
+				15165E8B2105EDAB00F27B9D /* PBXTargetDependency */,
 			);
 			name = "NAIL-iOSTests";
 			productName = "NAIL-iOSTests";
@@ -158,12 +246,16 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Blended Learning Center";
 				TargetAttributes = {
+					15165E5B2105ED9B00F27B9D = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					15D2F7B72101C6F400C402A9 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
 					};
 					15D2F7C02101C6F400C402A9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 15165E5B2105ED9B00F27B9D;
 					};
 				};
 			};
@@ -173,6 +265,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 15D2F7AE2101C6F400C402A9;
 			productRefGroup = 15D2F7B92101C6F400C402A9 /* Products */;
@@ -181,11 +274,22 @@
 			targets = (
 				15D2F7B72101C6F400C402A9 /* NAIL-iOS */,
 				15D2F7C02101C6F400C402A9 /* NAIL-iOSTests */,
+				15165E5B2105ED9B00F27B9D /* testapp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		15165E5A2105ED9B00F27B9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15165E692105ED9C00F27B9D /* LaunchScreen.storyboard in Resources */,
+				15165E662105ED9C00F27B9D /* Assets.xcassets in Resources */,
+				15165E642105ED9B00F27B9D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15D2F7B62101C6F400C402A9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,11 +307,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		15165E582105ED9B00F27B9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15165E612105ED9B00F27B9D /* ViewController.swift in Sources */,
+				15165E5F2105ED9B00F27B9D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15D2F7B32101C6F400C402A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				15D2F7D52101CFCD00C402A9 /* ApiContainer.swift in Sources */,
+				15165E922105F6AB00F27B9D /* BoxBinding.swift in Sources */,
 				15D2F7D32101CF8200C402A9 /* NativeAppIntegrationLayer.swift in Sources */,
 				15D2F7D92101D16C00C402A9 /* NAIL-API.swift in Sources */,
 				15D2F7D72101CFF100C402A9 /* AuthorizationContainer.swift in Sources */,
@@ -225,6 +339,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		15165E8B2105EDAB00F27B9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15165E5B2105ED9B00F27B9D /* testapp */;
+			targetProxy = 15165E8A2105EDAB00F27B9D /* PBXContainerItemProxy */;
+		};
+		15165E8F2105F3A900F27B9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15D2F7B72101C6F400C402A9 /* NAIL-iOS */;
+			targetProxy = 15165E8E2105F3A900F27B9D /* PBXContainerItemProxy */;
+		};
 		15D2F7C42101C6F400C402A9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 15D2F7B72101C6F400C402A9 /* NAIL-iOS */;
@@ -232,7 +356,66 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		15165E622105ED9B00F27B9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15165E632105ED9B00F27B9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15165E672105ED9C00F27B9D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15165E682105ED9C00F27B9D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		15165E812105ED9C00F27B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4Q8U997468;
+				INFOPLIST_FILE = testapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.EduID-Mobile.NAIL-iOS.testapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15165E822105ED9C00F27B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4Q8U997468;
+				INFOPLIST_FILE = testapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.EduID-Mobile.NAIL-iOS.testapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		15D2F7CA2101C6F400C402A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -412,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Q8U997468;
 				INFOPLIST_FILE = "NAIL-iOSTests/Info.plist";
@@ -424,6 +608,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testapp.app/testapp";
 			};
 			name = Debug;
 		};
@@ -431,6 +616,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Q8U997468;
 				INFOPLIST_FILE = "NAIL-iOSTests/Info.plist";
@@ -443,12 +629,22 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testapp.app/testapp";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		15165E872105ED9C00F27B9D /* Build configuration list for PBXNativeTarget "testapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15165E812105ED9C00F27B9D /* Debug */,
+				15165E822105ED9C00F27B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		15D2F7B22101C6F400C402A9 /* Build configuration list for PBXProject "NAIL-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
