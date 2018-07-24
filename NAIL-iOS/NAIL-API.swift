@@ -98,13 +98,13 @@ public class NAILapi {
         return nailtmp.getDisplayName(serviceName: serviceName)
     }
     
-    public static func getServiceToken(serviceName : String, protocolName : String) -> String? {
+    public static func getServiceToken(serviceName : String, protocolName : String) -> [String:Any]? {
         guard let nailtmp = self.getNail() else {
             return nil
         }
         
         let authPackage = nailtmp.getAccessToken(serviceName: serviceName, protocolName: protocolName)
-        return authPackage?["api_key"] as? String
+        return authPackage
         //nailtmp.getA
     }
     

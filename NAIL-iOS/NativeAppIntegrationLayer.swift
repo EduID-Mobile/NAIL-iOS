@@ -126,7 +126,7 @@ public class NativeAppIntegrationLayer {
         }
         
         //return authCon.getAccessToken()
-        //for now return the api_key....
+        //for now return the api_key.... workaround
         return authCon.getAuthPackage()
         /*
          do {
