@@ -66,7 +66,7 @@ public class NativeAppIntegrationLayer {
     }
     
     
-    func parseEntry(jsonDict : [String: Any]){
+    public func parseEntry(jsonDict : [String: Any]){
         
         guard let name = jsonDict["engineName"] as? String else{ return; }
         guard let endpoint = jsonDict["engineLink"] as? String else{ return; }
@@ -104,11 +104,11 @@ public class NativeAppIntegrationLayer {
         
     }
     
-    func getServiceNames() -> [String] {
+    public func getServiceNames() -> [String] {
         return serviceNames
     }
     
-    func getAccessToken (serviceName : String, protocolName : String) -> [String:Any]? {
+    public func getAccessToken (serviceName : String, protocolName : String) -> [String:Any]? {
         
         guard let index = serviceNames.index(of: serviceName) else {
             return nil
@@ -140,7 +140,7 @@ public class NativeAppIntegrationLayer {
         
     }
     
-    func getDisplayName (serviceName: String) -> String {
+    public func getDisplayName (serviceName: String) -> String {
         
         if serviceNames.contains(serviceName) {
             return serviceName
@@ -149,7 +149,7 @@ public class NativeAppIntegrationLayer {
         }
     }
     
-    func getEndpointUrl ( serviceName : String, protocolName: String) -> String {
+    public func getEndpointUrl ( serviceName : String, protocolName: String) -> String {
         
         guard let index = serviceNames.index(of: serviceName) else {
             return ""
@@ -170,7 +170,7 @@ public class NativeAppIntegrationLayer {
         return res
     }
     
-    func getServiceUrl (serviceName: String) -> String {
+    public func getServiceUrl (serviceName: String) -> String {
         guard let index = serviceNames.index(of: serviceName) else {
             return ""
         }
@@ -179,7 +179,7 @@ public class NativeAppIntegrationLayer {
         return result
     }
     
-    func removeService(serviceName : String){
+    public func removeService(serviceName : String){
         guard let index = serviceNames.index(of: serviceName) else {
             print("Error on removing service : Cannot find the service name")
             return
@@ -193,7 +193,7 @@ public class NativeAppIntegrationLayer {
         authorization.remove(at: index)
     }
     
-    func clearAllService(){
+    public func clearAllService(){
         
         serviceNames.removeAll()
         endpointUrl.removeAll()
