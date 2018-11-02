@@ -59,7 +59,7 @@ public class NAILapi {
             if itemProvider.hasItemConformingToTypeIdentifier(kUTTypeJSON as String){
                 itemProvider.loadItem(forTypeIdentifier: kUTTypeJSON as String, options: nil, completionHandler: { (data, error) -> Void in
                     if error != nil {
-                        print("error on extracting data from extension , \(error.localizedDescription)")
+                        print("error on extracting data from extension , \(error!.localizedDescription)")
                         response = ""
                     }
                     let jsonData = data as! Data
